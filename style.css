@@ -1,0 +1,180 @@
+/* Establecer un reseteo básico */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+  font-family: sans-serif; /* Fuente predeterminada */
+  padding: 90px 20px 0; /* Espacios alrededor del contenido */
+  padding-bottom: 50px; /* Espacio inferior adicional */
+}
+
+/* Estilos del encabezado */
+.header {
+  background-color: #FA88EE; /* Color de fondo */
+  height: 100px; /* Altura */
+  position: fixed; /* Fijar en la parte superior */
+  width: 100%; /* Ancho completo */
+  top: 0; /* Arriba */
+  left: 0; /* Izquierda */
+}
+
+/* Estilos de la barra de navegación */
+.nav {
+  display: flex; /* Mostrar en línea */
+  justify-content: space-between; /* Distribución de espacio entre elementos */
+  max-width: 992px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estilos de los enlaces de navegación */
+.nav-link {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos del logotipo */
+.logo {
+  font-size: 30px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  padding: 0 40px; /* Espacios alrededor del logotipo */
+  line-height: 80px; /* Altura de línea */
+}
+
+/* Estilos del menú de navegación */
+.nav-menu {
+  display: flex; /* Mostrar en línea */
+  margin-right: 40px; /* Espacio derecho */
+  list-style: none; /* Sin viñetas */
+}
+
+/* Estilos de los elementos del menú de navegación */
+.nav-menu-item {
+  font-size: 18px; /* Tamaño de la fuente */
+  margin: 0 10px; /* Espacio horizontal entre elementos */
+  line-height: 80px; /* Altura de línea */
+  text-transform: uppercase; /* Convertir a mayúsculas */
+  width: max-content; /* Ancho máximo */
+}
+
+/* Estilos de los enlaces del menú de navegación */
+.nav-menu-link {
+  padding: 8px 12px; /* Espacios alrededor del texto */
+  border-radius: 3px; /* Borde redondeado */
+}
+
+/* Estilos al pasar el mouse por los enlaces del menú */
+.nav-menu-link:hover {
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos del botón de alternar para dispositivos móviles */
+.nav-toggle {
+  color: white; /* Color del icono */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 30px; /* Tamaño de la fuente */
+  padding: 0 20px; /* Espacios alrededor */
+  line-height: 60px; /* Altura de línea */
+  cursor: pointer; /* Cursor de puntero */
+  display: none; /* Ocultar por defecto */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustes en el cuerpo para dispositivos móviles */
+  body {
+    padding-top: 70px; /* Espacio arriba */
+  }
+
+  /* Ajustes en el encabezado para dispositivos móviles */
+  .header {
+    height: 60px; /* Altura más pequeña */
+  }
+
+  /* Ajustes en el logotipo para dispositivos móviles */
+  .logo {
+    font-size: 25px; /* Tamaño de la fuente más pequeño */
+    padding: 0 20px; /* Espacios alrededor */
+    line-height: 60px; /* Altura de línea */
+  }
+
+  /* Ajustes en el menú de navegación para dispositivos móviles */
+  .nav-menu {
+    flex-direction: column; /* Cambio a disposición de columna */
+    align-items: center; /* Centrar horizontalmente */
+    margin: 0; /* Sin margen */
+    background-color: #515151; /* Color de fondo */
+    position: fixed; /* Fijar posición */
+    top: 60px; /* Arriba */
+    width: 100%; /* Ancho completo */
+    padding: 20px 0; /* Espacios alrededor */
+    height: calc(100% - 60px); /* Altura */
+    overflow-y: auto; /* Desplazamiento vertical */
+    left: 100%; /* Fuera de la pantalla */
+    transition: left 0.3s; /* Transición suave */
+  }
+
+  /* Ajustes en los elementos del menú de navegación para dispositivos móviles */
+  .nav-menu-item {
+    line-height: 70px; /* Altura de línea */
+  }
+
+  /* Mostrar el menú al hacer clic en el botón de alternar */
+  .nav-toggle {
+    display: block; /* Mostrar */
+  }
+
+  /* Mostrar el menú */
+  .nav-menu_visible {
+    left: 0; /* Mover hacia la izquierda */
+  }
+
+  /* Ocultar el borde de enfoque en el botón de alternar */
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none; /* Ocultar el borde */
+  }
+}
+
+/* Estilos para títulos */
+h3, h1 {
+  max-width: 800px; /* Ancho máximo */
+  margin: 20px auto; /* Margen alrededor y centrado horizontalmente */
+  padding: 0 20px; /* Espacios alrededor */
+}
+
+/* Estilos del pie de página */
+.footer {
+  background-color: #FA88EE; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Alineación centrada */
+  padding: 10px 20px; /* Espacios alrededor */
+  position: fixed; /* Fijar en la parte inferior */
+  bottom: 0; /* En la parte inferior */
+  width: 100%; /* Ancho completo */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Sombra */
+}
+
+/* Estilos del contenido principal */
+main {
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: column; /* Columna */
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  text-align: center; /* Alineación centrada */
+}
+
+/* Estilos de imágenes dentro del contenido principal */
+main img {
+  max-width: 100%; /* Ancho máximo */
+  height: auto; /* Altura automática */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Establece el color de fondo del cuerpo de la página */
+body {
+background-color: #E6C0FE; /* Color de fondo */
+}
